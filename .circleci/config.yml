@@ -21,7 +21,23 @@ jobs:
       - run:
           name: "Say hello"
           command: "echo Hello, World!!!!"
-
+      - run:
+          name: "Show Date and Time"
+          command: |
+            echo "📅 Current Date and Time:"
+            date
+      - run:
+          name: "List Files in Project Directory"
+          command: |
+            echo "📁 Listing contents of the project folder:"
+            pwd
+            ls -la
+      - run:
+          name: "Finish Job"
+          command: |
+            echo "✅ All demo steps completed!"
+            echo "🎉 CI pipeline ran successfully. Goodbye from CircleCI 👋"
+    
 # Orchestrate jobs using workflows
 # See: https://circleci.com/docs/workflows/ & https://circleci.com/docs/configuration-reference/#workflows
 workflows:
